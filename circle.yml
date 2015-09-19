@@ -6,6 +6,9 @@ dependencies:
     - docker info
     - env
     - docker build -t biscarch/disrupt-autotagging .
+test:
+  override:
+    - echo true
 deployment:
   hub:
     branch: master
