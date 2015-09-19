@@ -15,5 +15,5 @@ deployment:
     commands:
       - env
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker tag biscarch/disrupt-autotagging:$CIRCLE_TAG
+      - docker tag biscarch/disrupt-autotagging biscarch/disrupt-autotagging:$CIRCLE_TAG
       - docker push biscarch/disrupt-autotagging:$CIRCLE_TAG
