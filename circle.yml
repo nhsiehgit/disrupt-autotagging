@@ -5,7 +5,7 @@ dependencies:
   override:
     - docker info
     - env
-    - docker build -t biscarch/disrupt-autotagging .
+    - docker build -t nhsiehdock/disrupt-autotagging .
 test:
   override:
     - echo true
