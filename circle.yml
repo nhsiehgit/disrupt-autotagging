@@ -10,8 +10,8 @@ deployment:
   hub:
     branch: master
     tag: /\d\.\d\.\d\..*/
-      owner: christopherbiscardi
-      commands:
-        - env
-        - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-        - docker push biscarch/disrupt-autotagging
+    owner: christopherbiscardi
+    commands:
+      - env
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push biscarch/disrupt-autotagging
