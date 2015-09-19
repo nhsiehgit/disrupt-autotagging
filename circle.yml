@@ -11,7 +11,7 @@ test:
     - echo true
 deployment:
   hub:
-    tag: /\d\.\d\.\d\..*/
+    tag: /[0-9]+(\.[0-9]+)*/
     owner: christopherbiscardi
     commands:
       - env
