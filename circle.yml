@@ -5,15 +5,16 @@ dependencies:
   override:
     - docker info
     - env
-    - docker build -t biscarch/disrupt-autotagging .
+    - docker build -t nhsiehdock/disrupt-autotagging .
 test:
   override:
     - echo true
 deployment:
   hub:
     tag: /[0-9]+(\.[0-9]+)*/
+    owner: nathanhsieh
     commands:
       - env
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker tag biscarch/disrupt-autotagging biscarch/disrupt-autotagging:$CIRCLE_TAG
-      - docker push biscarch/disrupt-autotagging:$CIRCLE_TAG
+      - docker tag nhsiehdock/disrupt-autotagging nhsiehdock/disrupt-autotagging:$CIRCLE_TAG
+      - docker push nhsiehdock/disrupt-autotagging:$CIRCLE_TAG
